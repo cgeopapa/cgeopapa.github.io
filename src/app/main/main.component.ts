@@ -52,7 +52,8 @@ export class MainComponent implements OnInit {
   public radarChartLabels: Label[] = ["Java EE", "Python", "C# .NET", "TypeScript", "SQL", "Angular", "Git", "Kotlin", "React"];
 
   public radarChartData: ChartDataSets[] = [
-    { data: [9.8, 8.4, 8.8, 8.7, 9.2, 8.2, 9.4, 7.6, 8.5],
+    { 
+      data: [9.8, 9.3, 9, 9.1, 9.2, 9.2, 9.4, 8.6, 8.5],
       borderColor: '#415bd1',
       borderWidth: 1,
       backgroundColor: '#0003',
