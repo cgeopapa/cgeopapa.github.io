@@ -26,20 +26,20 @@ main{
         color: #A3A3FF;
         font-style: italic;
     }
+    h3{
+        font-size: 2rem;
+        text-align: initial;
+        letter-spacing: 0.1rem;
+        font-family: inherit;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
     .container{
         display: flex;
         flex-direction: row;
         justify-content: center;
         margin-bottom: 4rem;
 
-        h3{
-            font-size: 2rem;
-            text-align: initial;
-            letter-spacing: 0.1rem;
-            font-family: inherit;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
         p{
             font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-size: 1.1rem;
@@ -78,7 +78,12 @@ main{
         }
         .contact-item > a:hover{
             color: #2f46af
-        }        
+        }   
+        
+        i{
+            margin: 1rem;
+            font-size: 6rem;
+        }
     }
 }
 @media (max-width: 750px){
