@@ -1,0 +1,83 @@
+---
+import Main from "../layouts/main.astro";
+---
+
+<Main title="George Papadopoulos">
+    <header class="bg-neutral-800 text-center p-4">
+        <a class="no-underline m-auto w-fit block" href="/">
+            <img class="rounded-full" src="img/logo.jpg" alt="logo" width="256px">
+        </a>
+        <h1 class="text-5xl tracking-wide my-1">George Papadopoulos</h1>
+        <h2 class="text-2xl tracking-wide italic my-2 text-neutral-400">Software Engineer</h2>
+    </header>
+    <main class="py-5 px-10 bg-neutral-700">
+        <div class="flex flex-col sm:flex-row sm:m-auto sm:w-4/5 sm:justify-center">
+            <section class="p-5 border-b-accent border-b-2 sm:border-0 sm:w-1/2">
+                <h3 class="text-4xl tracking-wide text-center p-5">About me</h3>
+                <p class="text-center sm:text-right text-lg">
+                    <!-- I have a BSc in Computer Science from Athens University of Economics and Business.<br>
+                    Currently at my MSc on Distributed Systems, Security and Emerging Information Technologies at University of Piraeus.<br><br> -->
+                    I love developing software that automates boring stuff and make everyday life just a little bit easier.<br>
+                    I am passionate about learning and trying new and emerging technologies.
+                </p>
+            </section>
+            <div class="w-1 bg-neutral-400 hidden sm:block"></div>
+            <section class="p-5 border-b-accent border-b-2 sm:border-0 sm:w-1/2">
+                <h3 class="text-4xl p-5 text-center">Where to find me</h3>
+                <ul class="text-center sm:text-left">
+                    <li class="m-5 text-2xl tracking-wider">
+                        <a class="hover:text-accent duration-300" href="https://www.linkedin.com/in/george-papadopoulos-3a9072154/" target="_blank">
+                            <i class="devicon-linkedin-plain"></i>
+                            LinkedIn
+                        </a>
+                    </li>
+                    <li class="m-5 text-2xl tracking-wider">
+                        <a class="hover:text-accent duration-300" href="https://github.com/cgeopapa" target="_blank">
+                            <i class="devicon-github-original"></i>
+                            GitHub
+                        </a>
+                    </li>
+                    <li class="m-5 text-2xl tracking-wider">
+                        <a class="hover:text-accent duration-300" href="https://gitlab.com/cgeopapa" target="_blank">
+                            <i class="devicon-gitlab-plain"></i>
+                            GitLab
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <section>
+            <h3 class="text-center text-4xl p-5">Skill Set</h3>
+            <div class="grid grid-cols-auto gap-1 max-w-3xl m-auto">
+                <div class="flex justify-center flex-col">
+                    <i class="devicon-java-plain text-6xl text-center"></i>
+                    <h4 class="text-center">Java</h4>
+                </div>
+                <div class="flex justify-center flex-col">
+                    <i class="devicon-python-plain text-6xl text-center"></i>
+                    <h4 class="text-center">Python</h4>
+                </div>
+                <div class="flex justify-center flex-col">
+                    <i class="devicon-javascript-plain text-6xl text-center"></i>
+                    <h4 class="text-center">Javascript</h4>
+                </div>
+                <div class="flex justify-center flex-col">
+                    <i class="devicon-nodejs-plain text-6xl text-center"></i>
+                    <h4 class="text-center">NodeJS</h4>
+                </div>
+                <div class="flex justify-center flex-col">
+                    <i class="devicon-typescript-plain text-6xl text-center"></i>
+                    <h4 class="text-center">Typescript</h4>
+                </div>
+                <div class="flex justify-center flex-col">
+                    <i class="devicon-angularjs-plain text-6xl text-center"></i>
+                    <h4 class="text-center">Angular</h4>
+                </div>
+                <div class="flex justify-center flex-col">
+                    <i class="devicon-git-plain text-6xl text-center"></i>
+                    <h4 class="text-center">Git</h4>
+                </div>
+            </div>
+        </section>
+    </main>
+</Main>

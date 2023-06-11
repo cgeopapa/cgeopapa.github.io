@@ -1,0 +1,41 @@
+---
+import Navbar from "../components/navbar/navbar.astro";
+const { title } = Astro.props
+---
+
+<html lang="en" class="p-0 m-0 text-slate-50">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+</head>
+<body class="my-0 lg:mx-20 bg-neutral-900 shadow-lg">
+    <Navbar></Navbar>
+    <slot />
+    <footer class="bg-neutral-800 flex justify-between items-center p-4">
+        <h4 class="text-lg">
+            &copy; {new Date().getFullYear()} George Papadopoulos
+        </h4>
+        <ul>
+            <li class="text-lg tracking-wider float-left m-1">
+                <a class="hover:text-accent duration-300" href="https://www.linkedin.com/in/george-papadopoulos-3a9072154/" target="_blank">
+                    <i class="devicon-linkedin-plain"></i>
+                </a>
+            </li>
+            <li class="text-lg tracking-wider float-left m-1">
+                <a class="hover:text-accent duration-300" href="https://github.com/cgeopapa" target="_blank">
+                    <i class="devicon-github-original"></i>
+                </a>
+            </li>
+            <li class="text-lg tracking-wider float-left m-1">
+                <a class="hover:text-accent duration-300" href="https://gitlab.com/cgeopapa" target="_blank">
+                    <i class="devicon-gitlab-plain"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>
