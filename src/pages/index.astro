@@ -1,5 +1,6 @@
 ---
 import Main from "../layouts/main.astro";
+import ProjectsTable from "../components/projects-table/projects-table.svelte"
 ---
 
 <Main title="George Papadopoulos">
@@ -47,7 +48,7 @@ import Main from "../layouts/main.astro";
             </section>
         </div>
         <section>
-            <h3 class="text-center text-4xl p-5">Skill Set</h3>
+            <h3 class="text-center text-4xl p-14">Skill Set</h3>
             <div class="grid grid-cols-auto gap-1 max-w-3xl m-auto">
                 <div class="flex justify-center flex-col">
                     <i class="devicon-java-plain text-6xl text-center"></i>
@@ -78,6 +79,10 @@ import Main from "../layouts/main.astro";
                     <h4 class="text-center">Git</h4>
                 </div>
             </div>
+        </section>
+        <section>
+            <h3 class="text-center text-4xl p-14">Projects</h3>
+            <ProjectsTable client:visible/>
         </section>
     </main>
 </Main>
