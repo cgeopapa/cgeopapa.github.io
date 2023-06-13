@@ -12,6 +12,7 @@ module.exports = {
 				'auto': "repeat(auto-fit, minmax(5rem, 1fr))"
 			},
 			colors: ({ theme }) => ({
+				// Same as the color of variable --mdc-theme-primary at src/global.css
 				'accent': '#415bd1'
 			})
 		},
@@ -25,5 +26,5 @@ module.exports = {
 				}
 			})
 		}),
-	]
+	],
 }

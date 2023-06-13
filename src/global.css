@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  /* This is the color of tailwind color accent. Configured at tailwind.config.cjs at theme.color */
+  --mdc-theme-primary: #415bd1;
+}
+
+@layer base {
+  a {
+    @apply hover:text-accent visited:text-inherit duration-300;
+  }
+}
