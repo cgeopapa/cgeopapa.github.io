@@ -1,0 +1,22 @@
+---
+const { projects } = Astro.props
+---
+<section class="[&>*:nth-child(even)>a]:order-last mb-6">
+    {projects.map((project) => (
+    <div class="sm:grid sm:grid-cols-3 p-2 border-t-1 border-t-accent">
+        <a href={project.url}>
+            <img src={`img/${project.img}`} alt={project.name} class="object-cover">
+        </a>
+        <div class="m-4 col-span-2 flex flex-col justify-between">
+            <div>
+                <h3 class="text-2xl">{project.name}</h3>
+                <p class="my-4 text-neutral-300">{project.description}</p>
+                <p class="my-4 text-neutral-200">{project.dev}</p>
+            </div>
+            <a href={project.url} target="_blank" class="text-center border-1 rounded-md border-neutral-500 py-2 w-full">
+                Go to Project
+            </a>
+        </div>
+    </div>
+    ))}
+</section>
