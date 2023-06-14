@@ -1,7 +1,7 @@
 ---
 const { projects } = Astro.props
 ---
-<section class="[&>*:nth-child(even)>a]:order-last mb-6">
+<section class="[&>*:nth-child(even)>a]:order-last">
     {projects.map((project) => (
     <div class="sm:grid sm:grid-cols-3 p-2 border-t-1 border-t-accent">
         <a href={project.url}>
