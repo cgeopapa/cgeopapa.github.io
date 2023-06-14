@@ -1,0 +1,34 @@
+[
+    {
+        "name": "CRAMM Risk Assessment (university project)",
+        "img": "cramm.png",
+        "description": "A project for my master degree. A simple tool to aiming to assist on the process of risk assessment. Following the CRAMM standard, it provides has features like Asset Cartography, Impact Assessment, Threat Assessment and summarizing the result in a Result Table. Hosted on Firebase Hosting service and utillizing Firebase's realtime database.",
+        "dev": "Developed using ReactJS and Typescript.",
+        "url": "https://mpksa20010-security-managment.firebaseapp.com/",
+        "depricated": false
+    },
+    {
+        "name": "24h Le Mans",
+        "img": "24h-lemans.png",
+        "description": "Full 24 hour race replay using official data from FIA. View specific racing categories or cars. Check their location on track. Fast forward time or jump to specific race hour.",
+        "dev": "Built with Unity 3D game engine and C# with Unity's librady.",
+        "url": "https://cubi-games.itch.io/24h-of-lemans-interactive-map",
+        "depricated": false
+    },
+    {
+        "name": "BeerRator",
+        "img": "beerator.png",
+        "description": "A note taking app regarding different types of beers I have tasted over the years. Take a photo of a beer name it and give it a description.",
+        "dev": "Hosted on Heroku free tier, so it might take a few seconds to load.",
+        "url": "https://beerator-server.herokuapp.com/",
+        "depricated": true
+    },
+    {
+        "name": "Movies (university project)",
+        "img": "movies.png",
+        "description": "Log-in or register a new account. Search for movies (using the omdb API) and desplay their plot, actors, rating etc. Bookmark your favorite movies and see them in the bookmark view list.",
+        "dev": "Created using Java spring for the backend server and HTML/CSS and vanilla Javascript for the frontend.",
+        "url": "https://movies-uni.herokuapp.com/",
+        "depricated": true
+    }
+]

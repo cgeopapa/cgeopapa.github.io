@@ -5,7 +5,7 @@
   "scripts": {
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro build && astro preview"
   },
   "dependencies": {
     "@astrojs/svelte": "^3.0.0",

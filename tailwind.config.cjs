@@ -1,4 +1,3 @@
-const plugin = require('tailwindcss/plugin');
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
@@ -22,15 +21,5 @@ module.exports = {
 				'1': '1px',
 			}
 		},
-	},
-	plugins: [
-		plugin(function ({ addBase }) {
-			addBase({
-				'@font-face': {
-					fontFamily: 'ropa',
-					src: 'url(fonts/RopaSans-Regular.ttf)'
-				}
-			})
-		}),
-	],
+	}
 }
