@@ -9,7 +9,7 @@ const depricated = liveProjects.filter((project) => project.depricated);
 <Main title="George Papadopoulos - Live Projects">
     <header class="bg-neutral-800 text-center p-4">
         <a class="no-underline m-auto w-fit block" href="/">
-            <img class="rounded-full" src="img/logo.jpg" alt="logo" width="128px">
+            <img class="rounded-full" src="img/logo.webp" alt="logo" width="128px">
         </a>
         <h1 class="text-4xl tracking-wide my-1">Live Projects</h1>
         <h2 class="text-lg tracking-wide italic my-2 text-neutral-400">Here is a list of projects you can run on your browser. Click on the link and check them out</h2>
@@ -17,15 +17,15 @@ const depricated = liveProjects.filter((project) => project.depricated);
     <main class="bg-neutral-700">
         <section class="[&>*:nth-child(even)>a]:order-last mb-6">
             {active.map((project) => (
-            <div class="grid grid-cols-3 p-2 border-b-1 border-b-accent ">
+            <div class="sm:grid sm:grid-cols-3 p-2 border-t-1 border-t-accent">
                 <a href={project.url}>
-                    <img src={`img/${project.img}`} alt={project.name} class="hover:shadow-md object-cover">
+                    <img src={`img/${project.img}`} alt={project.name} class="object-cover">
                 </a>
                 <div class="m-4 col-span-2 flex flex-col justify-between">
                     <div>
-                        <h3 class="text-3xl">{project.name}</h3>
-                        <p class="my-4">{project.description}</p>
-                        <p class="my-4">{project.dev}</p>
+                        <h3 class="text-2xl">{project.name}</h3>
+                        <p class="my-4 text-neutral-300">{project.description}</p>
+                        <p class="my-4 text-neutral-200">{project.dev}</p>
                     </div>
                     <a href={project.url} target="_blank" class="text-center border-1 rounded-md border-neutral-500 py-2 w-full">
                         Go to Project
@@ -36,7 +36,7 @@ const depricated = liveProjects.filter((project) => project.depricated);
         </section>
         <section>
             <h4 class="text-4xl m-8 text-center">Depricated Projects</h4>
-            <p class="text-neutral-200 px-52 text-center">
+            <p class="text-neutral-200 text-center px-4 mb-8 sm:px-52">
                 Due to <a href="https://blog.heroku.com/next-chapter" class="underline">
                     Heroku's new policy removing the free tier hosting</a>, the 
                 following projects are no longer active. As a tribute to those projects since they 
@@ -45,15 +45,15 @@ const depricated = liveProjects.filter((project) => project.depricated);
             </p>
             <div class="[&>*:nth-child(even)>a]:order-last mb-6">
                 {depricated.map((project) => (
-                <div class="grid grid-cols-3 p-2 border-b-1 border-b-accent ">
+                <div class="sm:grid sm:grid-cols-3 p-2 border-t-1 border-t-accent">
                     <a href={project.url}>
                         <img src={`img/${project.img}`} alt={project.name} class="hover:shadow-md object-cover">
                     </a>
                     <div class="m-4 col-span-2 flex flex-col justify-between">
                         <div>
-                            <h3 class="text-3xl">{project.name}</h3>
-                            <p class="my-4">{project.description}</p>
-                            <p class="my-4">{project.dev}</p>
+                            <h3 class="text-2xl">{project.name}</h3>
+                            <p class="my-4 text-neutral-300">{project.description}</p>
+                            <p class="my-4 text-neutral-200">{project.dev}</p>
                         </div>
                         <a href={project.url} target="_blank" class="text-center border-1 rounded-md border-neutral-500 py-2 w-full">
                             Go to Project
