@@ -12,7 +12,7 @@
             </TabBar>
             <div class="h-96 overflow-auto snap-y">
                 {#each tabs.get(active) as repo}
-                <div class="flex items-center border-b-1 border-accent border-opacity-50 hover:bg-accent hover:bg-opacity-5 duration-300">
+                <div class="flex flex-col sm:flex-row snap-start items-center border-b-1 border-accent border-opacity-50 hover:bg-accent hover:bg-opacity-5 duration-300">
                     <div class="w-full">
                         <div class="text-2xl mt-4 ">
                             <a href="{repo.url}" target="_blank">{repo.name}</a>
@@ -20,11 +20,10 @@
                         <div class="text-lg mb-4 italic text-neutral-300">{repo.description}</div>
                     </div>
                     <a href="{repo.url}" target="_blank" use:Ripple={{ surface: true, color: 'primary' }}
-                    tabindex="0" role="button" class="text-center border-1 rounded-md border-neutral-500 m-2 py-2 w-44">
+                    tabindex="0" role="button" class="text-center border-1 rounded-md border-neutral-500 m-2 py-2 w-full sm:w-44">
                         Show on GitHub
                     </a>
                 </div>
-                
                 {/each}
             </div>
         </div>

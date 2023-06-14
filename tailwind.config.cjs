@@ -5,7 +5,7 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				"sans": ["ropa", ...defaultTheme.fontFamily.sans]
+				"ropa": ["ropa", ...defaultTheme.fontFamily.sans]
 			},
 			gridTemplateColumns: {
 				'auto': "repeat(auto-fit, minmax(5rem, 1fr))"
