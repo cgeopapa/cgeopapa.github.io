@@ -14,13 +14,13 @@ const { title } = Astro.props
     <title>{title}</title>
 </head>
 <body class="my-0 lg:mx-20 shadow-lg">
-    <nav class="bg-neutral-700 flex justify-between sticky top-0 p-2 sm:p-4">
+    <nav class="bg-neutral-700 flex justify-between sticky top-0 p-2 sm:p-4 border-b-2 border-b-neutral-400">
         <div class="self-center">
             <a href="/" class="uppercase text-2xl tracking-wider">
                 George Papadopoulos
             </a>
             <div id="navlinks" class="sm:hidden flex flex-col align-middle max-h-0 duration-300 overflow-hidden">
-                <a class="text-xl p-2 px-6" href="#projects">Projects</a>
+                <a class="text-xl p-2 px-6" href="/#projects">Projects</a>
                 <a class="text-xl p-2 px-6" href="/live-projects">Live Projects</a>
             </div>
         </div>
@@ -33,7 +33,7 @@ const { title } = Astro.props
             </svg>
         </div>
         <div class="hidden sm:visible sm:flex">
-            <a class="text-xl p-2 px-6" href="#projects">Projects</a>
+            <a class="text-xl p-2 px-6" href="/#projects">Projects</a>
             <a class="text-xl p-2 px-6" href="/live-projects">Live Projects</a>
         </div>
     </nav>
