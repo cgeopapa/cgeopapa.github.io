@@ -11,10 +11,16 @@ module.exports = {
 			gridTemplateColumns: {
 				'auto': "repeat(auto-fit, minmax(5rem, 1fr))"
 			},
-			colors: ({ theme }) => ({
+			colors: {
 				// Same as the color of variable --mdc-theme-primary at src/global.css
 				'accent': '#415bd1'
-			})
+			},
+			maxHeight: {
+				'animation-end': '500rem',
+			},
+			borderWidth: {
+				'1': '1px',
+			}
 		},
 	},
 	plugins: [

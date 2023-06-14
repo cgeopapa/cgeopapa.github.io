@@ -1,4 +1,4 @@
-<div class="{loading ? 'max-h-8' : 'max-h-96'} duration-300 overflow-hidden">
+<div class="{loading ? 'max-h-8' : 'max-h-animation-end'} duration-300 overflow-hidden">
     {#if loading}
         <div class="flex justify-center">
             <CircularProgress class="h-8 w-8" indeterminate />
@@ -10,14 +10,23 @@
                     <Label>{tab}</Label>
                 </Tab>
             </TabBar>
-            <dl class="h-72 overflow-auto snap-y">
+            <div class="h-96 overflow-auto snap-y">
                 {#each tabs.get(active) as repo}
-                <dt class="text-2xl mt-4">
-                    <a href="{repo.url}" target="_blank">{repo.name}</a>
-                </dt>
-                <dd class="text-lg mb-4 italic text-neutral-300">{repo.description}</dd>
+                <div class="flex items-center border-b-1 border-accent border-opacity-50 hover:bg-accent hover:bg-opacity-5 duration-300">
+                    <div class="w-full">
+                        <div class="text-2xl mt-4 ">
+                            <a href="{repo.url}" target="_blank">{repo.name}</a>
+                        </div>
+                        <div class="text-lg mb-4 italic text-neutral-300">{repo.description}</div>
+                    </div>
+                    <a href="{repo.url}" target="_blank" use:Ripple={{ surface: true, color: 'primary' }}
+                    tabindex="0" role="button" class="text-center border-1 rounded-md border-neutral-500 m-2 py-2 w-44">
+                        Show on GitHub
+                    </a>
+                </div>
+                
                 {/each}
-            </dl>
+            </div>
         </div>
     {/if}
 </div>
@@ -25,11 +34,12 @@
 <script lang="ts">
     import Tab, { Label } from '@smui/tab';
     import TabBar from '@smui/tab-bar';
+    import Ripple from '@smui/ripple';
     import CircularProgress from '@smui/circular-progress';
     import { GithubApiService } from "../../services/github-api.service";
     import { RepoModel } from '../../model/repo.model';
 
-    let active = 'Java';
+    let active = 'all';
     let loading: boolean = true;
     let tabs: Map<string, RepoModel[]> = new Map();
 
@@ -37,12 +47,17 @@
         return r.json();
     }).then((result: any[]) => {
         tabs = new Map();
+        tabs.set("all", []);
         for(const repo of result) {
-            if(tabs.has(repo.language)) {
-                tabs.get(repo.language)?.push(new RepoModel(repo));
-            }
-            else {
-                tabs.set(repo.language, [new RepoModel(repo)]);
+            const repoModel = new RepoModel(repo);
+            if(repoModel.description) {
+                if(tabs.has(repo.language)) {
+                    tabs.get(repo.language)?.push(repoModel);
+                }
+                else {
+                    tabs.set(repo.language, [repoModel]);
+                }
+                tabs.get("all").push(repoModel);
             }
         }
         loading = false;

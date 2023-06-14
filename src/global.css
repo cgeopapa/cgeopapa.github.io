@@ -5,6 +5,7 @@
 :root{
   /* This is the color of tailwind color accent. Configured at tailwind.config.cjs at theme.color */
   --mdc-theme-primary: #415bd1;
+  --mdc-theme-secondary: #b33b3b;
 }
 
 @layer base {
